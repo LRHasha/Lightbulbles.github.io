@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hallmark Movie Bible Generator - Complete User's Guide</title>
+    <style>
+        :root {
+            --gold: #B8860B;
+            --dark-green: #1B5E20;
+            --light-bg: #FAFAF8;
+            --text-dark: #2C3E50;
+            --border: #E0E0E0;
+            --chat-bg: #F5F5F0;
+        }
+
+        .ai-smart-logo {
+            background-image: url("https://raw.githubusercontent.com/LRHasha/Lightbulbles.github.io/main/AI%20Smart%20Transparent.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 125.28px;
+            width: 229.68px;
+            vertical-align: middle;
+            margin-left: -97.6px;
+            display: inline-block;
+            position: relative;
+            top: 0px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            background: var(--light-bg);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: var(--dark-green);
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            margin-left: 0;
+            margin-top: 0;
+        }
+        
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-left: 14px;
+            margin-top: 18px;
+        }
+        
+        .title-container {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            margin-left: -86.4px;
+            margin-top: 14px;
+        }
+        
+        .title-container h1 {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .subtitle {
+            color: var(--gold);
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: var(--dark-green);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--gold);
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #444;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        h3 .ai-smart-logo {
+            margin-left: -76px;
+            margin-right: 0;
+        }
+        
+        h4 {
+            color: var(--dark-green);
+            margin-top: 20px;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: var(--chat-bg);
+            border-left: 4px solid var(--gold);
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        
+        .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            background: var(--gold);
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .btn-example {
+            background: var(--chat-bg);
+            border: 1px solid var(--border);
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        
+        .icon {
+            font-size: 1.2em;
+        }
+        
+        .tip {
+            background: #FFF8DC;
+            border-left: 4px solid var(--gold);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .info-box {
+            background: #FFFACD;
+            border: 1px solid #FFD700;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .info-box.highlight {
+            background: #E8F5E9;
+            border-color: var(--dark-green);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border: 1px solid var(--border);
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            background: var(--chat-bg);
+            color: var(--dark-green);
+            font-weight: bold;
+        }
+        
+        strong {
+            color: var(--dark-green);
+            font-weight: 600;
+        }
+        
+        .toc {
+            background: var(--chat-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .toc ul {
+            margin-left: 20px;
+        }
+        
+        .toc li {
+            margin-bottom: 8px;
+        }
+        
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+            color: var(--dark-green);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .feature-card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            background: #FAFAF8;
+        }
+        
+        .feature-card h4 {
+            margin-top: 0;
+        }
+        
+        /* Collapsible Sections */
+        .section-content {
+            display: none;
+        }
+
+        .section-content.expanded {
+            display: block;
+        }
+
+        .section-header {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .section-toggle {
+            display: inline-block;
+            margin-right: 8px;
+            font-weight: bold;
+            color: var(--dark-green);
+            transition: transform 0.3s ease;
+        }
+
+        .section-toggle.expanded {
+            transform: rotate(90deg);
+        }
+
+        /* Back to TOC Button */
+        .back-to-toc {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--dark-green);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 0.95em;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(27, 94, 32, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            z-index: 1000;
+            display: none;
+        }
+
+        .back-to-toc:hover {
+            background: #143a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(27, 94, 32, 0.4);
+        }
+
+        .back-to-toc.visible {
+            display: block;
+        }
+
+        /* Link Well Mascot - Draggable Floating Character */
+        .link-well-mascot {
+            position: fixed;
+            top: 280px;
+            right: 40px;
+            width: 120px;
+            height: 140px;
+            background: transparent;
+            cursor: grab;
+            user-select: none;
+            z-index: 999;
+        }
+
+        .link-well-mascot:active {
+            cursor: grabbing;
+        }
+
+        .link-well-mascot:hover {
+            filter: drop-shadow(0 0 10px rgba(184, 134, 11, 0.6));
+        }
+
+        .link-well-mascot.returning {
+            transition: left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* Mini Link Well in section header */
+        .linkwell-section-mini {
+            display: none;
+            position: absolute;
+            right: calc(-90px + 4in + 1.2in - 0.625in);
+            top: 50%;
+            transform: translateY(-50%);
+            width: 70px;
+            height: 85px;
+            z-index: 0;
+        }
+
+        .linkwell-section-mini img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        #meet-link-well {
+            position: relative;
+            overflow: visible;
+            z-index: 1;
+        }
+
+        #meet-link-well.in-view .linkwell-section-mini {
+            display: block;
+            animation: popIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        #meet-link-well:not(.in-view) .linkwell-section-mini {
+            animation: popOut 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        @keyframes popIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50%) scale(0.3);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(-50%) scale(1);
+            }
+        }
+
+        @keyframes popOut {
+            from {
+                opacity: 1;
+                transform: translateY(-50%) scale(1);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-50%) scale(0.3);
+            }
+        }
+
+        .link-well-mascot img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        /* Link Well Tooltip Bubble */
+        .link-well-mascot::before {
+            content: "I'm Link Well,\A your AI Writing Partner!\A \A Drag me around\A or double-click\A to send me home";
+            white-space: pre;
+            position: absolute;
+            bottom: 160px;
+            left: 50%;
+            transform: translateX(-50%) scale(0) translateY(10px);
+            background: linear-gradient(135deg, var(--dark-green) 0%, #0d3a15 100%);
+            color: white;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: center;
+            pointer-events: none;
+            box-shadow: 0 8px 24px rgba(27, 94, 32, 0.35);
+            border: 2px solid var(--gold);
+            min-width: 180px;
+            z-index: 1001;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-origin: bottom center;
+        }
+
+        .link-well-mascot::after {
+            content: "";
+            position: absolute;
+            bottom: 155px;
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            width: 0;
+            height: 0;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 10px solid var(--dark-green);
+            pointer-events: none;
+            z-index: 1001;
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-origin: bottom center;
+        }
+
+        .link-well-mascot:hover::before,
+        .link-well-mascot:hover::after {
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Link Well Mascot - Draggable Floating Character -->
+    <div id="linkWellMascot" class="link-well-mascot" title="Drag me around! Double-click to return home. I'm your AI writing partner, Link Well.">
+        <img src="https://raw.githubusercontent.com/LRHasha/Lightbulbles.github.io/main/Link_Well_Character_extracted%201.png" alt="Link Well - Your AI Writing Partner" draggable="false">
+    </div>
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="logo-container">
+                <span class="ai-smart-logo"></span>
+            </div>
+            <div class="title-container">
+                <h1>Hallmark Movie Bible Generator v1.2.20</h1>
+            </div>
+        </div>
+        <p class="copyright-notice-exact">Copyright © 2026 Lawrence Hasha and The Lightbulbles™ Syndicate. All Rights Reserved. Email Contact: <a href="mailto:LRHasha@Gmail.com">LRHasha@Gmail.com</a></p>
+        <p class="subtitle">Complete User's Guide & Feature Documentation</p>
+        
+        <div class="toc">
+            <h2 id="toc">Table of Contents</h2>
+            <ul style="font-size: 1.05em; line-height: 1.8;">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#meet-link-well">Meet Link Well — Your Writing Partner</a></li>
+                <li><a href="#core-features">Core Features</a>
+                    <ul>
+                        <li><a href="#load-sample">Load Sample Story (AI-Generated)</a></li>
+                        <li><a href="#narrative-ingest">Narrative Ingest Engine</a></li>
+                        <li><a href="#compliance">Compliance Scanner</a></li>
+                        <li><a href="#wip-recap">WIP Recap (Progress Tracker)</a></li>
+                        <li><a href="#ai-field-assist">AI Field Assistant (✦ Buttons)</a></li>
+                    </ul>
+                </li>
+                <li><a href="#understanding-structure">Understanding the Structure</a>
+                    <ul>
+                        <li><a href="#9-act-structure">The 9-Act Structure</a></li>
+                        <li><a href="#key-scenes">Key Scenes & Moments</a></li>
+                        <li><a href="#character-development">Character Development</a></li>
+                    </ul>
+                </li>
+                <li><a href="#workflow">Recommended Workflows</a></li>
+                <li><a href="#export">Exporting Your Work</a></li>
+                <li><a href="#project-management">Project Management</a></li>
+                <li><a href="#tips">Pro Tips & Best Practices</a></li>
+            </ul>
+        </div>
+        
+        <h2 id="overview">Overview</h2>
+        
+        <p>The <strong>Hallmark Movie Bible Generator</strong> is a comprehensive AI-powered tool designed to help screenwriters and story developers create professional <strong>Hallmark Channel Production Bibles</strong>—the master documents that define every character, scene, theme, and production detail for an original Hallmark movie.</p>
+        
+        <p>This tool guides you through the Hallmark storytelling formula, provides AI assistance at every step, validates your work against Hallmark's standards, and generates publication-ready Bibles in multiple formats.</p>
+        
+        <p><strong>What is a Production Bible?</strong> It's the definitive creative document that specifies everything about your story: the logline, full synopsis, character profiles with emotional arcs, the 9-act structure with break hooks, thematic elements, location details, and more. Networks and production companies use this to approve, develop, and green-light projects.</p>
+        
+        <h2 id="meet-link-well">Meet Link Well — Your Writing Partner
+            <span class="linkwell-section-mini">
+                <img src="https://raw.githubusercontent.com/LRHasha/Lightbulbles.github.io/main/Link_Well_Character_extracted%201.png" alt="Link Well" draggable="false">
+            </span>
+        </h2>
+        
+        <p>Link Well is your omnipresent, silent writing partner — a steady, digital companion whose purpose is to provide the gentle distraction and moral support necessary to weather the creative process. Rather than acting as a rigid tool of utility, he serves as a soulful anchor within your workspace, offering a reassuring presence and a friendly wave to break the isolation of the blank page.</p>
+        
+        <p>He is the quiet guardian of your creative stream — standing by to offer a moment of levity or a silent nod of validation whenever the weight of the work requires a steadying hand. You'll find him parked in the top-right corner of the page, pen in hand, beret tilted, ready to keep you company.</p>
+        
+        <p><strong>Interact with Link Well:</strong> Drag him around your workspace as you work, reposition him where he's most helpful, or double-click to return him to his anchor point. He's your creative companion—always present, always ready to support your journey from blank page to production-ready bible.</p>
+        
+        <h2 id="core-features">Core Features</h2>
+        
+        <h3 id="load-sample">Load Sample Story (AI-Generated) <span class="ai-smart-logo" role="img" aria-label="AI Smart!"></span></h3>
+        
+        <p>The <strong>Load Sample Story</strong> feature instantly populates your entire form with a complete, professionally-written example Hallmark production bible. You have two powerful options: learn from pre-built examples or let <strong>Link Well</strong>—your omnipresent AI writing partner—generate a completely original, fully-populated bible in seconds.</p>
+        
+        <h4>Option 1: Pre-Built Sample Stories (Reference & Learning)</h4>
+        
+        <p>Study professionally-constructed examples to understand Hallmark structure, tone, and depth. These static samples are invaluable for learning what a finished, production-ready bible looks like.</p>
+        
+        <p>A typical example is called <strong>"The Heritage Shield"</strong> or another classic Hallmark-style story, featuring:</p>
+        <ul>
+            <li><strong>Two protagonists</strong> with clear emotional wounds and complete character arcs</li>
+            <li><strong>A small-town setting</strong> (Vermont farm, small business, family home, etc.)</li>
+            <li><strong>Seasonal grounding</strong> (Christmas, Spring romance, Summer homecoming, Autumn harvest)</li>
+            <li><strong>The meet-cute:</strong> A perfectly executed first meeting with friction, humor, and chemistry</li>
+            <li><strong>Clear obstacles:</strong> Both romantic (Wrong Match) and plot-related that keep them apart</li>
+            <li><strong>The Catalyst Speech:</strong> Act 8's crucial moment where a mentor gives permission to choose love</li>
+            <li><strong>Supporting cast:</strong> Family members, friends, or community figures with depth</li>
+            <li><strong>Relationship Dynamics:</strong> Mapped connections between all characters</li>
+            <li><strong>Complete 9-act structure:</strong> All 8 commercial break hooks plus resolution</li>
+            <li><strong>Full compliance:</strong> Zero violations of Hallmark's content restrictions</li>
+        </ul>
+        
+        <h4>How to Load a Pre-Built Sample</h4>
+        
+        <div class="step">
+            <span class="step-num">1</span> Click <span class="btn-example"><span class="icon">📦</span> Load Sample</span> in the toolbar
+        </div>
+        
+        <div class="step">
+            <span class="step-num">2</span> Select a pre-built example from the list (e.g., "The Heritage Shield")
+        </div>
+        
+        <div class="step">
+            <span class="step-num">3</span> Review all sections to see how Hallmark stories are structured
+        </div>
+        
+        <div class="step">
+            <span class="step-num">4</span> Study the writing style, emotional beats, and level of detail
+        </div>
+        
+        <h4>What to Examine in Pre-Built Samples</h4>
+        
+        <p><strong>Logline & Synopsis:</strong> Notice how concise yet emotionally resonant the logline is (one sentence!). The synopsis runs 100-150 words and hits story beats without being a scene-by-scene breakdown.</p>
+        
+        <p><strong>Meet-Cute:</strong> See how friction creates chemistry. It's not just two people meeting—it's two people who collide unexpectedly and immediately have something to say to each other.</p>
+        
+        <p><strong>Obstacles:</strong> Both the "Wrong Match" and "Plot Obstacle" prevent easy resolution. The obstacles are NOT villainous—they're misunderstandings, circumstances, or prior commitments.</p>
+        
+        <p><strong>Catalyst Speech:</strong> This is the emotional turning point. A trusted figure (parent, mentor, friend) tells the protagonist to follow their heart. It's conversational, emotional, and specific to the character's wound.</p>
+        
+        <p><strong>Character Profiles:</strong> Notice the balance between emotional depth (wounds, desires, fears) and practical details (occupation, age, background). Each character has a reason to care about the main conflict.</p>
+        
+        <p><strong>9-Act Structure:</strong> Each act has a beat (what happens) and a hook (the emotional question that makes you stay). Act breaks are emotional cliffhangers, not plot twists.</p>
+
+        <hr style="margin: 30px 0; border: none; border-top: 2px solid var(--gold);">
+        
+        <h4>⭐ Option 2: Surprise Me - AI's Choice (GENERATE ORIGINAL CONCEPTS)</h4>
+        
+        <p><strong style="color: var(--dark-green); font-size: 1.1em;">This is the power feature that transforms your workflow.</strong> Instead of starting from scratch, let <strong>Link Well</strong>—your AI writing partner—generate a completely original Hallmark production bible with nearly all content automatically populated. Every click produces a unique, never-before-seen concept.</p>
+        
+        <p><strong>Why This Changes Everything:</strong></p>
+        <ul>
+            <li><strong>Instant Inspiration:</strong> Generate infinite unique Hallmark concepts in seconds instead of hours of brainstorming</li>
+            <li><strong>Full Population:</strong> Link Well populates 80-90% of your bible automatically—logline, synopsis, characters, acts, obstacles, emotional beats, and more</li>
+            <li><strong>Hallmark-Compliant:</strong> Every generated concept is already aligned with Hallmark's storytelling formula and content guidelines</li>
+            <li><strong>Customizable Foundation:</strong> Use it as-is or edit/refine to match your vision—you're building on a solid, professionally-structured foundation</li>
+            <li><strong>Unlimited Variations:</strong> Click "Surprise Me" multiple times to explore different seasonal settings, character types, obstacles, and emotional arcs</li>
+            <li><strong>No Blank Page Fear:</strong> Start with a fully-fleshed concept instead of staring at empty form fields</li>
+        </ul>
+        
+        <h4>What Link Well Generates For You</h4>
+        
+        <p>When you choose "Surprise Me - AI's Choice," Link Well creates a complete, original bible including:</p>
+        
+        <ul>
+            <li><strong>Unique Logline</strong> - A compelling one-sentence hook specific to the generated concept</li>
+            <li><strong>Full Synopsis</strong> - 100-150 word narrative summary with emotional arc and story beats</li>
+            <li><strong>Two Original Protagonists</strong> - Complete profiles with names, ages, occupations, emotional wounds, desires, and character arcs</li>
+            <li><strong>Distinct Setting</strong> - Small-town location with seasonal grounding (Winter Holiday, Spring Romance, Summer Adventure, Autumn Harvest)</li>
+            <li><strong>The Perfect Meet-Cute</strong> - Original scenario showing friction, humor, and instant chemistry</li>
+            <li><strong>Dual Obstacles</strong> - Both the "Wrong Match" romantic barrier and a plot obstacle that keeps them apart organically</li>
+            <li><strong>Supporting Cast</strong> - 3-5 fully developed supporting characters with depth and relationship dynamics</li>
+            <li><strong>Complete 9-Act Structure</strong> - All acts outlined with emotional beats and commercial break hooks</li>
+            <li><strong>The Catalyst Speech</strong> - The pivotal Act 8 moment with original dialogue (conversational, emotional, character-specific)</li>
+            <li><strong>Thematic Elements</strong> - Overarching themes (family, second chances, small-town values, etc.)</li>
+            <li><strong>Production Notes</strong> - Budget considerations, locations, and practical production details</li>
+        </ul>
+        
+        <h4>How to Use Surprise Me - AI's Choice</h4>
+        
+        <div class="step">
+            <span class="step-num">1</span> Click <span class="btn-example"><span class="icon">✨</span> Surprise Me</span> button in the toolbar
+        </div>
+        
+        <div class="step">
+            <span class="step-num">2</span> <strong>Link Well</strong> generates a completely original Hallmark concept in 2-3 seconds
+        </div>
+        
+        <div class="step">
+            <span class="step-num">3</span> Your entire form is populated with a unique, production-ready bible
+        </div>
+        
+        <div class="step">
+            <span class="step-num">4</span> Review the generated content—it's 80-90% complete and ready to customize
+        </div>
+        
+        <div class="step">
+            <span class="step-num">5</span> Edit any section to match your vision (or click "Surprise Me" again for a different concept)
+        </div>
+        
+        <div class="step">
+            <span class="step-num">6</span> Export your customized, Hallmark-ready bible
+        </div>
+        
+        <h4>Pro Tips for Surprise Me - AI's Choice</h4>
+        
+        <p><strong>Explore Variations:</strong> Click "Surprise Me" 3-5 times to see different concepts. One might resonate with your creative vision, or you might combine elements from multiple generations.</p>
+        
+        <p><strong>Seasonal Strategy:</strong> If you have a specific seasonal slot in mind (Christmas, Spring, Summer, Autumn), generate multiple options and choose the one that best fits that timeframe.</p>
+        
+        <p><strong>Character Types:</strong> If you prefer certain protagonist archetypes (single parent, business owner, artist, etc.), Link Well generates diverse character combinations—keep clicking until you find your perfect pairing.</p>
+        
+        <p><strong>Use As Foundation, Not Final Product:</strong> While Link Well's output is Hallmark-compliant and professional, this is your starting point. Customize the emotional arcs, dialogue, and specific plot details to make it uniquely yours.</p>
+        
+        <p><strong>Rapid Prototyping:</strong> In a single session, you can generate 10+ unique Hallmark concepts, review them all, and select your top 2-3 to develop further. This transforms weeks of brainstorming into hours.</p>
+        
+        <h4>The Link Well Advantage</h4>
+        
+        <p><strong>Link Well is more than a writing tool—it's your creative partner.</strong> Unlike generic AI content generators, Link Well is specifically trained on Hallmark's storytelling formula, character archetypes, emotional beats, and compliance requirements. Every generated concept is:</p>
+        
+        <ul>
+            <li>✓ Structured around the proven 9-act Hallmark formula</li>
+            <li>✓ Populated with emotionally resonant, character-driven stories</li>
+            <li>✓ Compliant with Hallmark's content restrictions and values</li>
+            <li>✓ Ready for professional submission or network pitch</li>
+            <li>✓ Infinitely unique—never the same concept twice</li>
+        </ul>
+        
+        <p><strong>Bottom line:</strong> "Surprise Me - AI's Choice" powered by Link Well means you can generate a production-ready Hallmark bible as quickly as you can click a button. What used to take weeks of brainstorming and form-filling now takes minutes.
+        
+        <h3 id="narrative-ingest">Narrative Ingest Engine <span class="ai-smart-logo" role="img" aria-label="AI Smart!"></span></h3>
+        
+        <p>The <strong>Narrative Ingest Engine</strong> is a powerful AI-powered feature that converts your freeform notes into a structured production bible. Instead of manually filling 50+ form fields, you paste rough ideas and let AI map them to the right places.</p>
+        
+        <h4>What It Does</h4>
+        
+        <p>The Ingest Engine accepts:</p>
+        <ul>
+            <li>Brainstorm notes and scattered ideas</li>
+            <li>Character sketches (even informal descriptions)</li>
+            <li>Treatment fragments and plot outlines</li>
+            <li>Dialogue snippets and scene descriptions</li>
+            <li>Backstory and world-building notes</li>
+            <li>Emotional beats and thematic ideas</li>
+            <li>Anything written in any order or format</li>
+        </ul>
+        
+        <p>The AI then scans for <strong>Bible DNA markers</strong>—keywords, names, emotional language, and narrative structure—and intelligently maps each piece to the correct field in your production bible.</p>
+        
+        <h4>When to Use Narrative Ingest</h4>
+        
+        <p><strong>Perfect for:</strong></p>
+        <ul>
+            <li>You have rough notes from brainstorming sessions</li>
+            <li>You're adapting a short story, article, or novel into Hallmark format</li>
+            <li>You have character sketches but no structured bible</li>
+            <li>You want to jumpstart the process without starting from blank</li>
+            <li>Your notes are scattered across multiple documents</li>
+            <li>You prefer speaking/thinking before writing formally</li>
+        </ul>
+        
+        <h4>How to Use Narrative Ingest</h4>
+        
+        <div class="step">
+            <span class="step-num">1</span> Click <span class="btn-example"><span class="icon">📝</span> Narrative Ingest</span> in the toolbar
+        </div>
+        
+        <div class="step">
+            <span class="step-num">2</span> A modal opens with a large text area
+        </div>
+        
+        <div class="step">
+            <span class="step-num">3</span> Paste or type ALL your freeform notes—don't worry about organization
+        </div>
+        
+        <p style="font-style: italic; padding: 12px; background: var(--chat-bg); border-radius: 4px; margin: 12px 0;">
+            <strong>Example input:</strong> "Sarah is a magazine editor from NYC who returns to her family's Vermont farm after her dad's stroke. She meets Jake, the carpenter restoring the barn. They argue about selling the farm. Her mom wants her to stay. Jake lost his wife and doesn't believe in second chances at love. By the end, they both realize what really matters—family, community, and each other."
+        </p>
+        
+        <div class="step">
+            <span class="step-num">4</span> Click "Parse & Ingest" or "Let AI Map"
+        </div>
+        
+        <div class="step">
+            <span class="step-num">5</span> AI analyzes your text and identifies key story DNA
+        </div>
+        
+        <div class="step">
+            <span class="step-num">6</span> Suggested mappings appear for each field with the text AI extracted
+        </div>
+        
+        <div class="step">
+            <span class="step-num">7</span> Review each suggestion:
+        </div>
+        
+        <p style="margin-left: 30px; margin-bottom: 15px;">
+            <strong>✓ Accept</strong> — Use this suggestion as-is<br>
+            <strong>✎ Edit</strong> — Refine the wording before accepting<br>
+            <strong>✕ Reject</strong> — Skip this field (don't populate)<br>
+            <strong>↻ Regenerate</strong> — Ask AI to map this differently
+        </p>
+        
+        <div class="step">
+            <span class="step-num">8</span> Once satisfied, click "Commit to Form"
+        </div>
+        
+        <div class="step">
+            <span class="step-num">9</span> All approved mappings populate into your form
+        </div>
+        
+        <h4>What Narrative Ingest Recognizes</h4>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Pattern Type</th>
+                    <th>Example</th>
+                    <th>Maps To</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Character markers</strong></td>
+                    <td>"Sarah is a magazine editor from NYC"</td>
+                    <td>Character Profiles, Occupations</td>
+                </tr>
+                <tr>
+                    <td><strong>Emotional wounds</strong></td>
+                    <td>"Jake lost his wife and doesn't believe in love"</td>
+                    <td>Character Emotional Arcs, Wounds</td>
+                </tr>
+                <tr>
+                    <td><strong>Locations & seasons</strong></td>
+                    <td>"Vermont farm after her dad's stroke"</td>
+                    <td>Primary Location, Seasonal Block</td>
+                </tr>
+                <tr>
+                    <td><strong>Conflict & obstacles</strong></td>
+                    <td>"They argue about selling the farm"</td>
+                    <td>Plot Obstacle, Romantic Obstacle</td>
+                </tr>
+                <tr>
+                    <td><strong>Meeting moments</strong></td>
+                    <td>"She meets Jake, the carpenter"</td>
+                    <td>Meet-Cute, Character Introduction</td>
+                </tr>
+                <tr>
+                    <td><strong>Thematic elements</strong></td>
+                    <td>"By the end they realize what really matters"</td>
+                    <td>Theme, Resolution, Character Growth</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h4>Pro Tips for Narrative Ingest</h4>
+        
+        <div class="tip">
+            <strong>Include specific emotional language:</strong> Use words like "discovers," "realizes," "struggles with," "must choose," "learns," "overcomes." The AI recognizes emotional beats.
+        </div>
+        
+        <div class="tip">
+            <strong>Name your characters:</strong> Even in rough notes, use names consistently. The AI will recognize "Sarah" and "Jake" as the main characters.
+        </div>
+        
+        <div class="tip">
+            <strong>Include sensory/setting details:</strong> "Vermont farm," "small town," "coffee shop" help the AI understand location and season.
+        </div>
+        
+        <div class="tip">
+            <strong>Don't worry about grammar or organization:</strong> You can paste a complete brain dump. The AI handles messy input.
+        </div>
+        
+        <div class="tip">
+            <strong>Use it as a jumpstart, NOT a shortcut:</strong> Narrative Ingest gets 70-80% of content in roughly the right place. You'll still need to review, refine, and add missing details manually.
+        </div>
+        
+        <h4>What Narrative Ingest Cannot Do</h4>
+        
+        <ul>
+            <li>✗ Generate original ideas (it only parses what you give it)</li>
+            <li>✗ Fill in fields with no related content in your notes</li>
+            <li>✗ Fix plot holes or story logic problems</li>
+            <li>✗ Rewrite your content for quality (it relocates, not rewrites)</li>
+            <li>✗ Create a perfect mapping (you must review and refine)</li>
+        </ul>
+        
+        <h3 id="compliance">Compliance Scanner ⚡</h3>
+        
+        <p>The <strong>Hallmark Compliance Scanner</strong> validates your entire bible against Hallmark Channel's content standards, ensuring your story meets broadcast requirements and brand guidelines.</p>
+        
+        <h4>What It Checks</h4>
+        
+        <p><strong>Against the "Never List" (content restrictions):</strong></p>
+        <ul>
+            <li>No bowling, karaoke, or dancing as a central activity</li>
+            <li>No excessive cynicism or dismissal of faith/family</li>
+            <li>No violence, graphic content, or dark themes</li>
+            <li>No characters smoking or excessive alcohol use</li>
+            <li>No sexual content or adult themes</li>
+            <li>No profanity or harsh language</li>
+        </ul>
+        
+        <p><strong>Required sections present:</strong></p>
+        <ul>
+            <li>Logline (must be one sentence)</li>
+            <li>Synopsis (should be 100-150 words)</li>
+            <li>Character profiles for all major characters</li>
+            <li>Meet-cute clearly described</li>
+            <li>Obstacles (both romantic and plot)</li>
+            <li>Catalyst speech included</li>
+            <li>Complete 9-act structure</li>
+        </ul>
+        
+        <h4>How to Run Compliance Check</h4>
+        
+        <div class="step">
+            <span class="step-num">1</span> Click <span class="btn-example"><span class="icon">⚡</span> Compliance</span> in the toolbar
+        </div>
+        
+        <div class="step">
+            <span class="step-num">2</span> The scanner analyzes every field
+        </div>
+        
+        <div class="step">
+            <span class="step-num">3</span> Results show PASS/WARN/FAIL for each category
+        </div>
+        
+        <div class="step">
+            <span class="step-num">4</span> Specific issues are flagged with suggestions for fixes
+        </div>
+        
+        <h3 id="wip-recap">WIP Recap (Progress Tracker) 📋</h3>
+        
+        <p>The <strong>WIP Recap</strong> shows you a color-coded progress report of every field in your production bible, tracking completion percentage and giving you a visual overview of what's done, what's started, and what still needs work.</p>
+        
+        <h4>What It Shows</h4>
+        
+        <ul>
+            <li><strong>Green (Complete):</strong> Field has substantial content (150+ characters)</li>
+            <li><strong>Yellow (Started):</strong> Field has some content but needs expansion</li>
+            <li><strong>Red (Empty):</strong> Field has no content yet</li>
+            <li><strong>Overall Completeness %:</strong> Your progress toward a finished bible</li>
+        </ul>
+        
+        <h4>How to Use WIP Recap</h4>
+        
+        <div class="step">
+            <span class="step-num">1</span> Click <span class="btn-example"><span class="icon">📋</span> WIP Recap</span> in the toolbar
+        </div>
+        
+        <div class="step">
+            <span class="step-num">2</span> A color-coded report shows every field and its status
+        </div>
+        
+        <div class="step">
+            <span class="step-num">3</span> Focus on red fields first (empty sections)</li>
+        </div>
+        
+        <div class="step">
+            <span class="step-num">4</span> Use it to track progress toward 100% completion
+        </div>
+        
+        <h3 id="ai-field-assist">AI Field Assistant (✦ Buttons)</h3>
+        
+        <p>Every text field has an <span class="btn-example">AI ✦</span> button that opens a specialized chat where you can get help writing that specific field. Describe what you want, ask for alternatives, or request improvements.</p>
+        
+        <h4>How It Works</h4>
+        
+        <div class="step">
+            <span class="step-num">1</span> Click the <span class="btn-example">AI ✦</span> button next to any field
+        </div>
+        
+        <div class="step">
+            <span class="step-num">2</span> A chat modal opens with context about what field you're writing
+        </div>
+        
+        <div class="step">
+            <span class="step-num">3</span> Describe your idea, ask for help, or request options
+        </div>
+        
+        <div class="step">
+            <span class="step-num">4</span> Copy the AI's response and paste it into your field
+        </div>
+        
+        <h2 id="understanding-structure">Understanding the Structure</h2>
+        
+        <h3 id="9-act-structure">The 9-Act Structure</h3>
+        
+        <p>Hallmark movies follow a specific 9-act structure built around 8 commercial breaks. Each act has a beat (what happens) and a hook (the emotional question that keeps viewers watching).</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Act</th>
+                    <th>Pages</th>
+                    <th>The Beat</th>
+                    <th>The Hook (Question for viewers)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>1</strong></td>
+                    <td>6-8 pages</td>
+                    <td>Introduce the protagonist and their world. Show what's missing in their life.</td>
+                    <td>Will they get what they need?</td>
+                </tr>
+                <tr>
+                    <td><strong>2</strong></td>
+                    <td>5-7 pages</td>
+                    <td>The meet-cute. Two people collide. Chemistry and friction.</td>
+                    <td>What happens between these two?</td>
+                </tr>
+                <tr>
+                    <td><strong>3</strong></td>
+                    <td>5-7 pages</td>
+                    <td>Escalation. They're circling each other. Obstacles appear.</td>
+                    <td>Will they overcome their differences?</td>
+                </tr>
+                <tr>
+                    <td><strong>4</strong></td>
+                    <td>5-7 pages</td>
+                    <td>First turning point. Something forces them closer or pushes them apart.</td>
+                    <td>What's the real problem between them?</td>
+                </tr>
+                <tr>
+                    <td><strong>5</strong></td>
+                    <td>7-9 pages</td>
+                    <td>Deepening. They learn each other's wounds. Feelings grow.</td>
+                    <td>Can they really be together?</td>
+                </tr>
+                <tr>
+                    <td><strong>6</strong></td>
+                    <td>7-9 pages</td>
+                    <td>Darker moment. Misunderstanding or external pressure tears them apart.</td>
+                    <td>Is it really over?</td>
+                </tr>
+                <tr>
+                    <td><strong>7</strong></td>
+                    <td>5-7 pages</td>
+                    <td>Low point. Everything seems lost. Hope is gone.</td>
+                    <td>Will they find their way back?</td>
+                </tr>
+                <tr>
+                    <td><strong>8</strong></td>
+                    <td>8-10 pages</td>
+                    <td><strong>THE CATALYST SPEECH.</strong> A mentor tells the protagonist to choose love. Permission granted. New perspective.</td>
+                    <td>Will they take the chance?</td>
+                </tr>
+                <tr>
+                    <td><strong>9</strong></td>
+                    <td>10-12 pages</td>
+                    <td>Resolution. They reunite, overcome obstacles, and build their new life together. Themes resolved.</td>
+                    <td>Happy ending confirmed.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3 id="key-scenes">Key Scenes & Moments</h3>
+        
+        <h4>The Meet-Cute</h4>
+        <p>This is the MOST IMPORTANT scene. It's not just two people meeting—it's two people who collide unexpectedly, have immediate chemistry (and friction), and can't stop thinking about each other. This scene should include humor, misunderstanding, and a clear sense that "these two are going to fall in love." Every emotional beat in the rest of the movie stems from this moment.</p>
+        
+        <h4>The Obstacles</h4>
+        <p>Hallmark stories have TWO types of obstacles:</p>
+        <p><strong>Wrong Match:</strong> The romantic obstacle. Usually a misunderstanding, a prior commitment, or a false belief that keeps them from admitting their feelings. Example: "She thinks he's with someone else" or "He's determined to move away."</p>
+        <p><strong>Plot Obstacle:</strong> The external problem. The plot that drives the story forward. Example: "The family farm is going bankrupt" or "Her company is moving to another city."</p>
+        
+        <h4>The Catalyst Speech (Act 8)</h4>
+        <p>This is Act 8. A trusted figure—usually a parent, mentor, or close friend—delivers a speech that gives the protagonist permission to choose love over practical concerns. It's emotional, specific to their wound, and changes their perspective. This is where the story shifts from "will they?" to "yes, they will."</p>
+        
+        <h3 id="character-development">Character Development</h3>
+        
+        <p>Every Hallmark character needs:</p>
+        <ul>
+            <li><strong>An emotional wound:</strong> Something from their past that makes them doubt themselves</li>
+            <li><strong>A surface goal:</strong> What they think they want (often wrong)</li>
+            <li><strong>A real desire:</strong> What they actually need (usually love, family, belonging)</li>
+            <li><strong>An arc:</strong> How they change from beginning to end</li>
+        </ul>
+        
+        <p>Example: Sarah thinks she needs to succeed in New York (surface goal), but she actually needs to reconnect with family and find love (real desire). By the end, she realizes that success means nothing without the people you love.</p>
+        
+        <h2 id="workflow">Recommended Workflows</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>Workflow 1: Learn by Example</h4>
+                <ol>
+                    <li>Load Sample Story</li>
+                    <li>Read everything carefully</li>
+                    <li>Study the structure, tone, and depth</li>
+                    <li>Save the sample to your projects</li>
+                    <li>Start your own project blank</li>
+                    <li>Refer back to the sample as you write</li>
+                </ol>
+            </div>
+            
+            <div class="feature-card">
+                <h4>Workflow 2: Quick Start with Ingest</h4>
+                <ol>
+                    <li>Paste your rough notes into Narrative Ingest</li>
+                    <li>Review and approve AI suggestions</li>
+                    <li>Use AI ✦ buttons to refine fields</li>
+                    <li>Run Compliance check</li>
+                    <li>Fill in any remaining gaps</li>
+                    <li>Export when complete</li>
+                </ol>
+            </div>
+            
+            <div class="feature-card">
+                <h4>Workflow 3: Manual Creation</h4>
+                <ol>
+                    <li>Start with a blank project</li>
+                    <li>Fill Project Overview first</li>
+                    <li>Write your logline & synopsis</li>
+                    <li>Detail your meet-cute</li>
+                    <li>Define obstacles</li>
+                    <li>Create character profiles</li>
+                    <li>Build your 9-act structure</li>
+                    <li>Use AI ✦ buttons as needed</li>
+                </ol>
+            </div>
+            
+            <div class="feature-card">
+                <h4>Workflow 4: Hybrid Approach</h4>
+                <ol>
+                    <li>Load the sample to understand format</li>
+                    <li>Use Narrative Ingest to organize your ideas</li>
+                    <li>Manually write/refine key sections</li>
+                    <li>Use AI ✦ for polish</li>
+                    <li>Run Compliance & WIP Recap</li>
+                    <li>Export and submit</li>
+                </ol>
+            </div>
+        </div>
+        
+        <h2 id="export">Exporting Your Work</h2>
+        
+        <h4>Export Formats Available</h4>
+        
+        <ul>
+            <li><strong>HTML:</strong> Fully formatted, print-ready document in your browser</li>
+            <li><strong>Markdown (.md):</strong> Structured text with YAML front matter—upload to Claude to generate a finished PDF</li>
+            <li><strong>PDF:</strong> Print directly to PDF from your browser</li>
+            <li><strong>Plain Text (.txt):</strong> Simple text version for backup</li>
+        </ul>
+        
+        <div class="step">
+            <span class="step-num">1</span> Click <span class="btn-example"><span class="icon">⬇️</span> Export</span> in the toolbar
+        </div>
+        
+        <div class="step">
+            <span class="step-num">2</span> Choose your format
+        </div>
+        
+        <div class="step">
+            <span class="step-num">3</span> Download your file
+        </div>
+        
+        <h2 id="project-management">Project Management</h2>
+        
+        <h4>Saving & Loading Projects</h4>
+        
+        <p>Your work is saved automatically to your browser's local storage whenever you make changes. You can:</p>
+        <ul>
+            <li>Create multiple projects</li>
+            <li>Load any saved project by clicking <span class="btn-example"><span class="icon">📂</span> Load</span></li>
+            <li>Rename or delete projects</li>
+            <li>Switch between projects</li>
+        </ul>
+        
+        <h4>Creating a New Project</h4>
+        
+        <div class="step">
+            <span class="step-num">1</span> Click <span class="btn-example"><span class="icon">📄</span> New</span>
+        </div>
+        
+        <div class="step">
+            <span class="step-num">2</span> Enter a project name
+        </div>
+        
+        <div class="step">
+            <span class="step-num">3</span> Choose to start blank, with a sample, or with Narrative Ingest
+        </div>
+        
+        <h2 id="tips">Pro Tips & Best Practices</h2>
+        
+        <div class="tip">
+            <strong>Study the sample multiple times:</strong> Each read reveals something new. See how obstacles escalate, how emotions deepen, how the catalyst speech lands.
+        </div>
+        
+        <div class="tip">
+            <strong>Keep your logline to ONE sentence:</strong> If you need two sentences, your logline is too complicated. Hallmark loves simplicity.
+        </div>
+        
+        <div class="tip">
+            <strong>Make obstacles emotionally resonant, not villainous:</strong> Nobody is "bad" in Hallmark. They're just wrong for each other, or circumstances divide them. Even the antagonist has understandable motives.
+        </div>
+        
+        <div class="tip">
+            <strong>The Catalyst Speech is crucial:</strong> Spend time on this. It's where the protagonist gives themselves permission to choose love. Make it emotional and specific.
+        </div>
+        
+        <div class="tip">
+            <strong>Character wounds drive everything:</strong> Start with why each character doubts themselves, and build the story around healing that wound.
+        </div>
+        
+        <div class="tip">
+            <strong>Use WIP Recap regularly:</strong> Check your progress weekly. It keeps you motivated and shows you where to focus next.
+        </div>
+        
+        <div class="tip">
+            <strong>Run Compliance check before export:</strong> Make sure your bible passes all automated checks before final submission.
+        </div>
+    </div>
+
+    <!-- Back to TOC Button -->
+    <button class="back-to-toc" id="backToToc">↑ Back to TOC</button>
+
+    <script>
+        // Collapse/Expand functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = [
+                'overview', 'core-features', 'load-sample', 'narrative-ingest', 
+                'compliance', 'wip-recap', 'ai-field-assist', 'understanding-structure',
+                '9-act-structure', 'key-scenes', 'character-development', 'workflow',
+                'export', 'project-management', 'tips'
+            ];
+
+            // Wrap section content in collapsible containers
+            sections.forEach(sectionId => {
+                const header = document.getElementById(sectionId);
+                if (header) {
+                    // Add toggle arrow if not already added
+                    if (!header.querySelector('.section-toggle')) {
+                        const toggle = document.createElement('span');
+                        toggle.className = 'section-toggle';
+                        toggle.textContent = '▶';
+                        header.insertBefore(toggle, header.firstChild);
+                    }
+                    header.classList.add('section-header');
+
+                    // Wrap content after header until next h2 or h3
+                    const content = document.createElement('div');
+                    content.className = 'section-content';
+                    
+                    let sibling = header.nextElementSibling;
+                    while (sibling && sibling.tagName !== 'H2' && sibling.tagName !== 'H3') {
+                        const nextSibling = sibling.nextElementSibling;
+                        content.appendChild(sibling);
+                        sibling = nextSibling;
+                    }
+                    
+                    if (content.children.length > 0) {
+                        header.parentNode.insertBefore(content, header.nextSibling);
+                    }
+
+                    // Add click handler
+                    header.addEventListener('click', function() {
+                        const nextDiv = this.nextElementSibling;
+                        if (nextDiv && nextDiv.classList.contains('section-content')) {
+                            const isExpanded = nextDiv.classList.contains('expanded');
+                            nextDiv.classList.toggle('expanded');
+                            const toggle = this.querySelector('.section-toggle');
+                            if (toggle) toggle.classList.toggle('expanded');
+                        }
+                    });
+                }
+            });
+
+            // Back to TOC button functionality
+            const backBtn = document.getElementById('backToToc');
+            const tocElement = document.getElementById('toc');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backBtn.classList.add('visible');
+                } else {
+                    backBtn.classList.remove('visible');
+                }
+            });
+
+            backBtn.addEventListener('click', function() {
+                // Collapse all sections
+                const allSectionContents = document.querySelectorAll('.section-content.expanded');
+                allSectionContents.forEach(section => {
+                    section.classList.remove('expanded');
+                    const toggle = section.previousElementSibling.querySelector('.section-toggle');
+                    if (toggle) toggle.classList.remove('expanded');
+                });
+                
+                tocElement.scrollIntoView({ behavior: 'smooth' });
+            });
+
+            // TOC links expand sections when clicked
+            const tocLinks = document.querySelectorAll('.toc a[href^="#"]');
+            tocLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetHeader = document.getElementById(targetId);
+                    
+                    if (targetHeader) {
+                        // Find and expand the section
+                        const nextDiv = targetHeader.nextElementSibling;
+                        if (nextDiv && nextDiv.classList.contains('section-content')) {
+                            nextDiv.classList.add('expanded');
+                            const toggle = targetHeader.querySelector('.section-toggle');
+                            if (toggle) toggle.classList.add('expanded');
+                        }
+                        
+                        // Scroll to section
+                  setTimeout(() => {
+                            targetHeader.scrollIntoView({ behavior: 'smooth' });
+                        }, 100);
+                    }
+                });
+            });
+        });
+
+        // Mini Link Well in section header - appear when section comes into view
+        const meetLinkWellSection = document.getElementById('meet-link-well');
+        
+        if (meetLinkWellSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Section is in view
+                        meetLinkWellSection.classList.add('in-view');
+                    } else {
+                        // Section is out of view
+                        meetLinkWellSection.classList.remove('in-view');
+                    }
+                });
+            }, {
+                threshold: 0.3 // Trigger when 30% of section is visible
+            });
+            
+            observer.observe(meetLinkWellSection);
+        }
+
+        // Link Well Mascot - Smooth dragging with mouse tracking
+        const mascot = document.getElementById('linkWellMascot');
+        let isDragging = false;
+        let offsetX = 0;
+        let offsetY = 0;
+
+        if (mascot) {
+            // Set initial home position
+            mascot.style.right = '40px';
+            mascot.style.top = '280px';
+            mascot.style.left = 'auto';
+            mascot.style.bottom = 'auto';
+
+            // Double-click to return home with animation
+            mascot.addEventListener('dblclick', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Add returning class for smooth animation
+                mascot.classList.add('returning');
+                
+                // Calculate the left position that equals right: 40px
+                // right: 40px means: position from right edge = 40px
+                // Convert to left: left = window.innerWidth - 40px - element.width
+                const homeLeft = window.innerWidth - 40 - mascot.offsetWidth;
+                
+                // Reset to home position using left (since that's what we use when dragging)
+                mascot.style.left = homeLeft + 'px';
+                mascot.style.top = '280px';
+                mascot.style.right = 'auto';
+                mascot.style.bottom = 'auto';
+                
+                // Remove returning class after animation
+                setTimeout(() => {
+                    mascot.classList.remove('returning');
+                }, 500);
+            });
+
+            // Start dragging
+            mascot.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                mascot.classList.remove('returning');
+                
+                // Calculate offset from mouse to element position
+                const rect = mascot.getBoundingClientRect();
+                offsetX = e.clientX - rect.left;
+                offsetY = e.clientY - rect.top;
+                
+                // Disable text selection while dragging
+                mascot.style.userSelect = 'none';
+                document.body.style.userSelect = 'none';
+            });
+
+            // Smooth dragging with mouse movement
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging) {
+                    let newX = e.clientX - offsetX;
+                    let newY = e.clientY - offsetY;
+                    
+                    // Keep mascot within bounds
+                    newX = Math.max(0, Math.min(newX, window.innerWidth - mascot.offsetWidth));
+                    newY = Math.max(0, Math.min(newY, window.innerHeight - mascot.offsetHeight));
+                    
+                    // Apply position smoothly
+                    mascot.style.left = newX + 'px';
+                    mascot.style.top = newY + 'px';
+                    mascot.style.right = 'auto';
+                    mascot.style.bottom = 'auto';
+                }
+            });
+
+            // Stop dragging
+            document.addEventListener('mouseup', () => {
+                if (isDragging) {
+                    isDragging = false;
+                    mascot.style.userSelect = 'none';
+                    document.body.style.userSelect = 'auto';
+                }
+            });
+
+            // Touch support for mobile (smooth tracking)
+            mascot.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                mascot.classList.remove('returning');
+                
+                // Calculate offset from touch to element position
+                const rect = mascot.getBoundingClientRect();
+                offsetX = e.touches[0].clientX - rect.left;
+                offsetY = e.touches[0].clientY - rect.top;
+                
+                e.preventDefault();
+            });
+
+            document.addEventListener('touchmove', (e) => {
+                if (isDragging) {
+                    let newX = e.touches[0].clientX - offsetX;
+                    let newY = e.touches[0].clientY - offsetY;
+                    
+                    // Keep mascot within bounds
+                    newX = Math.max(0, Math.min(newX, window.innerWidth - mascot.offsetWidth));
+                    newY = Math.max(0, Math.min(newY, window.innerHeight - mascot.offsetHeight));
+                    
+                    // Apply position smoothly
+                    mascot.style.left = newX + 'px';
+                    mascot.style.top = newY + 'px';
+                    mascot.style.right = 'auto';
+                }
+            });
+
+            // Stop dragging
+            document.addEventListener('mouseup', () => {
+                if (isDragging) {
+                    isDragging = false;
+                    mascot.style.userSelect = 'none';
+                    document.body.style.userSelect = 'auto';
+                }
+            });
+
+            // Touch support for mobile (smooth tracking)
+            mascot.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                mascot.classList.remove('returning');
+                
+                // Calculate offset from touch to element position
+                const rect = mascot.getBoundingClientRect();
+                offsetX = e.touches[0].clientX - rect.left;
+                offsetY = e.touches[0].clientY - rect.top;
+                
+                e.preventDefault();
+            });
+
+            document.addEventListener('touchmove', (e) => {
+                if (isDragging) {
+                    let newX = e.touches[0].clientX - offsetX;
+                    let newY = e.touches[0].clientY - offsetY;
+                    
+                    // Keep mascot within bounds
+                    newX = Math.max(0, Math.min(newX, window.innerWidth - mascot.offsetWidth));
+                    newY = Math.max(0, Math.min(newY, window.innerHeight - mascot.offsetHeight));
+                    
+                    // Apply position smoothly
+                    mascot.style.left = newX + 'px';
+                    mascot.style.top = newY + 'px';
+                    mascot.style.right = 'auto';
+                    mascot.style.bottom = 'auto';
+                }
+            });
+
+            document.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+        }
+    </script>
+
+    <!-- Audio preload for Link Well "Hello" -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Find the Link Well image in the Meet Link Well section
+            const linkwellImage = document.querySelector('span.linkwell-section-mini img');
+            
+            if (linkwellImage) {
+                // Add the audio URL as a data attribute
+                linkwellImage.setAttribute('data-audio-hello', 'https://raw.githubusercontent.com/LRHasha/Lightbulbles.github.io/main/Link%20Well%20Hello.wav');
+                
+                // Create and preload audio
+                const helloAudio = new Audio();
+                helloAudio.preload = 'auto';
+                helloAudio.src = 'https://raw.githubusercontent.com/LRHasha/Lightbulbles.github.io/main/Link%20Well%20Hello.wav';
+                
+                // Add mouseover event listener
+                linkwellImage.addEventListener('mouseover', () => {
+                    helloAudio.play().catch(e => console.log('Audio play failed:', e));
+                });
+            }
+        });
+    </script>
+</body>
+</html>
